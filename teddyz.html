@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teddyz Nepal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f6;
+      text-align: center;
+      padding: 1rem;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid #fbcfe8;
+    }
+    h1 {
+      color: #ec4899;
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      color: #d946ef;
+      margin: 0.5rem 0;
+    }
+    .buttons {
+      margin: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .buttons button {
+      background-color: #f9a8d4;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    .product {
+      background-color: #fff;
+      border: 2px solid #fbcfe8;
+      border-radius: 9999px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .product:hover {
+      transform: scale(1.03);
+    }
+    .product img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .product h3 {
+      margin: 0.5rem 0 0.2rem;
+      color: #ec4899;
+    }
+    .product p {
+      margin: 0.2rem;
+      font-size: 0.95rem;
+    }
+    footer {
+      margin-top: 2rem;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff0f6;
+      padding: 1rem;
+      border: 2px solid #f9a8d4;
+      border-radius: 20px;
+      z-index: 999;
+    }
+  </style>
+  <script>
+    function redirectToInsta() {
+      window.location.href = "https://www.instagram.com/teddyz.np/";
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="https://i.imgur.com/H4JQ9J2.jpg" alt="Teddyz Logo" />
+    <h1>Teddyz Nepal</h1>
+    <p>Adorable Plushies to Hug & Love 💕</p>
+    <p>Every teddy has a story, every plush brings a smile!</p>
+  </header>
+
+  <div class="buttons">
+    <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'});">Products</button>
+    <button onclick="redirectToInsta()">Order</button>
+    <button onclick="redirectToInsta()">Contact Us</button>
+  </div>
+
+  <section id="products" class="grid">
+    <div class="product" onclick="alert('Soft and cuddly bamboo panda plushie.')">
+      <img src="bapd.jpeg" alt="Bamboo Panda" />
+      <h3>Bamboo Panda</h3>
+      <p>Rs. 699</p>
+    </div>
+    <div class="product" onclick="alert('Cute capybaras in vacation mode!')">
+      <img src="https://i.imgur.com/CaMbOtU.png" alt="Capybara Collection" />
+      <h3>Capybara Collection</h3>
+      <p>Rs. 899</p>
+    </div>
+    <div class="product" onclick="alert('Adorable Hello Kitty hugging plushie.')">
+      <img src="https://i.imgur.com/V2n4xzM.png" alt="Hello Kitty Teddy" />
+      <h3>Hello Kitty Teddy</h3>
+      <p>Rs. 749</p>
+    </div>
+    <div class="product" onclick="alert('Magical glowing Stitch plushie.')">
+      <img src="https://i.imgur.com/7k5W8TG.png" alt="Breathing Stitch Teddy" />
+      <h3>Breathing Stitch Teddy</h3>
+      <p>Rs. 999</p>
+    </div>
+    <div class="product" onclick="alert('Mini Labubu keychains to match your mood.')">
+      <img src="https://i.imgur.com/fv3Q4Ai.png" alt="Labubu Keychain" />
+      <h3>Labubu Keychain</h3>
+      <p>Rs. 299</p>
+    </div>
+    <div class="product" onclick="alert('Surprise bunny inside a carrot pouch!')">
+      <img src="https://i.imgur.com/lXlsE9K.png" alt="Carrot Bunny" />
+      <h3>Carrot Bunny</h3>
+      <p>Rs. 499</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Order your favorite plush now!</p>
+    <button onclick="redirectToInsta()">Visit Our Instagram</button>
+  </footer>
+
+</body>
+</html>
